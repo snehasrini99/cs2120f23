@@ -1,5 +1,4 @@
 /-!
-New
 # Lectures 1 and 2: Types, Terms, Applications
 -/
 
@@ -10,9 +9,10 @@ Here are some basic data types. The #check command
 tells you that each of these is a Type.
 -/
 
-#check Bool
+#check Bool  /-whats the type of Bool-/
 #check Nat
 #check String
+#check (and true false) /-a function-/
 
 /-!
 Here are some terms (values) of these types.
@@ -645,3 +645,15 @@ plausible interpretation of the snack policy that the Dad
 was communicating to his daughter? (You can have one or the
 other or none but not both)?
 -/
+ def my_not: Bool → Bool
+  | true => false
+  | false => true
+
+#reduce my_not true
+
+#check Nat → Nat
+
+
+#check Bool → (Bool → Bool)
+#reduce and false true
+#check and false /-partial evaluation-/
