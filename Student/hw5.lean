@@ -172,3 +172,5 @@ Option, Box, and Tree values using <$> notation.
 #eval (λ s => s ++ "!")  <$>  (some "Hi")
 #reduce( tree_functor <$> Nat.succ) atree
 #reduce (box_functor <$>  Nat.succ) (Box.contents 2)
+
+

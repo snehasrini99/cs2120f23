@@ -16,6 +16,8 @@ def foldr {α : Type} : monoid' α → List α → α
 what does a monoid do
 
 it extends a binary operator to be a n-ary opertaor.
+
+A group is a monoid but has an additional operator called reverse
 -/
 
 structure my_monoid (α : Type) where
